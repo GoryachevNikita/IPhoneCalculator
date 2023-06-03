@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/*ResetCss*/
+/*1.Обнуляем отступы*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/*2.Убираем лигии обводки ссылок*/
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  color: inherit;
+}
+
+/*3.Делаем основные теги блочными*/
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/*4.Уравниваем рамеры шрифтов и элентов в структуре*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*5.Наследование тегов форм семейства шрифтов*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/*6.Обнуление определенных кроссбраузерных параметров у тегов форм*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*====================================================================*/
+.wrapper {
+  border: 1px solid #000;
+  width: 400px;
+  height: 850px;
+  margin: 20px auto;
+  padding: 15px;
+  display: grid;
+  grid-template: minmax(40%, auto) 1fr/1fr;
+  background-color: #000;
+  border-radius: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.display {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  align-items: end;
+  justify-content: end;
+  font-size: 90px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+.display .display-top {
+  font-size: 40px;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template: repeat(5, 1fr)/repeat(4, 1fr);
+  gap: 15px;
+}
+
+.button {
+  color: white;
+  font-size: 35px;
+  border-radius: 50%;
+  background-color: rgb(67, 64, 64);
+  transition: all ease 0.5s;
+}
+
+.number:hover {
+  background-color: rgb(224, 210, 210);
+  color: #000;
+}
+
+.grey {
+  background-color: rgb(224, 210, 210);
+  color: #000;
+}
+
+.yellow {
+  background-color: orange;
+}
+
+.zero-btn {
+  justify-content: start;
+  grid-column: span 2;
+  border-radius: 30px 30px 30px 30px;
+}
+.zero-btn .button {
+  width: 38%;
+  height: 38%;
+}
+
+.active {
+  background-color: white;
+  color: orange;
+}
